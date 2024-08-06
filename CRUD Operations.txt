@@ -1,0 +1,71 @@
+1. Create (POST)
+
+Postman
+-------
+Method: POST
+URL: http://localhost:5000/items
+Body: Raw (JSON)
+{
+    "name": "item1",
+    "description": "This is item 1",
+    "quantity": 10
+}
+
+
+cURL
+----
+curl -X POST http://localhost:5000/items -H "Content-Type: application/json" -d '{
+    "name": "item1",
+    "description": "This is item 1",
+    "quantity": 10
+}'
+
+
+2. Read (GET)
+
+Postman
+-------
+Method: GET
+URL: http://localhost:5000/items
+
+
+cURL
+----
+curl http://localhost:5000/items
+
+
+
+3. Update (PUT)
+
+Postman
+-------
+Method: PUT
+URL: http://localhost:5000/items/1
+Body: Raw (JSON)
+{
+    "name": "item1 updated",
+    "description": "This is item 1 updated",
+    "quantity": 20
+}
+
+cURL
+----
+curl -X PUT http://localhost:5000/items/1 -H "Content-Type: application/json" -d '{
+    "name": "item1 updated",
+    "description": "This is item 1 updated",
+    "quantity": 20
+}'
+
+
+
+4. Delete (DELETE)
+
+Postman
+-------
+Method: DELETE
+URL: http://localhost:5000/items/1
+
+
+cURL
+----
+curl -X DELETE http://localhost:5000/items/1
